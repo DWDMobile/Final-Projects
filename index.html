@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Tasky</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Landing Screen -->
+        <div class="row">
+          <div class="col-xs-12 title header" style="text-align:center">
+            Tasky
+          </div>
+          <div class="row">
+            <input type="date" id="myDate">
+          </div>
+        </div>
+        <div class="projects">
+          <div class="row">
+            <div class="col-xs-12 project">
+              <div class="projectName">
+                Project Name
+              </div>
+              <button type="button" id="newTask" class="btn btn-lg btn-block">
+                <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row row-proj">
+          <div class="col-xs-6">
+            <button type="button" id="newProj" class="btn btn-primary btn-lg btn-block">
+              <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="col-xs-6">
+            <button type="button" id="removeTasks" class="btn btn-primary btn-lg btn-block">
+              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="http://rawgit.com/ngryman/jquery.finger/v0.1.2/dist/jquery.finger.js"></script>
+      <script src="//code.skygear.io/js/polyfill/latest/polyfill.min.js"></script>
+      <script src="//code.skygear.io/js/skygear/latest/skygear.min.js"></script>
+
+      <script src="script.js"></script>
+  </body>
+</html>
