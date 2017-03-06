@@ -1,0 +1,55 @@
+body {
+  display: table;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100%;
+  overflow: auto;
+}
+#myDate{
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: rgb(200,200,200);
+  padding-left: 50px;
+  text-align: center;
+  border-style: none;
+}
+.container{
+  height:100%;
+}
+.projects{
+  min-height:78vh;
+  max-height: 78vh;
+}
+.row{
+  height: 100%;
+}
+.project{
+  height: 100%;
+  border-style: solid;
+  border-width: thin;
+  border-color: rgb(221,221,221);
+  background-color: rgb(246,246,246);
+  padding: 10px;
+}
+.projectName{
+  font-family: 'Oswald', sans-serif;
+  padding-bottom: 5px;
+  font-size: 18px;
+  text-align: center;
+}
+.title{
+  font-family: 'Oswald', sans-serif;
+  background-color: rgb(200,200,200);
+  text-align: center;
+  font-size: 22px;
+  padding-top: 5px;
+}
+.ui-btn{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
