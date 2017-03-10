@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Cantarell:700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>YAMAY</title>
+</head>
+
+<body class="backbody">
+    <div class="app">
+
+      <div class="slidedark"></div>
+    <!-- put your content here! -->
+    <header>
+      <div class="headerdiv">
+
+        <span class="toggle-button">
+          <div class="menu-bar menu-bar-top"></div>
+          <div class="menu-bar menu-bar-middle"></div>
+          <div class="menu-bar menu-bar-bottom"></div>
+        </span>
+
+        <img src="img/menu.png" alt="menu" class="menu" id="menu">
+        <span class="headertitle">MAIN INGREDIENTS</span>
+        <img src="img/search.png" alt="search" class="search">
+      </div>
+    </header>
+    <main>
+        <div id="circle1">
+          <img src="img/c1.png" alt="c1" id="chicken">
+        </div>
+        <div id="circle2">
+          <img src="img/c2.png" alt="c2" id="pork">
+        </div>
+        <div id="circle3">
+          <img src="img/c3.png" alt="c3" id="potato">
+        </div>
+        <div id="circle4">
+          <img src="img/c4.png" alt="c4" id="pasta">
+        </div>
+        <div id="circle5">
+          <img src="img/c5.png" alt="c5" id="cheese">
+        </div>
+        <div id="circle6">
+          <img src="img/c6.png" alt="c6" id="bread">
+        </div>
+        <div id="circle7">
+          <img src="img/c7.png" alt="c7" id="rice">
+        </div>
+        <div id="circle8">
+          <a href="recipelist.html">
+          <img src="img/c8.png" alt="c8" id="egg" >
+          </a>
+        </div>
+
+        <div id="slide-left">
+          <section id="slide-menu" class="slide sidemenu">
+              <div class="slidemenudiv">
+                  <div id = "close">X</div>
+                  <ul class="slidemenulist">
+                  <li id="menumy" class = "slidemenucontent">MY KITCHEN</li>
+                  <a href="/recipe.html">
+                  <li id="menufavorite" class = "slidemenucontent">FAVORITE</li>
+                  </a>
+                  <a href="/index.html">
+                  <li id="menuing" class = "slidemenucontent">MAIN INGREDIENTS</li>
+                  </a>
+                  <a href="add.html">
+                  <li id="menuadd" class = "slidemenucontent">ADD YOUR OWN</li>
+                  </a>
+                </ul>
+              </div>
+          </section>
+        </div>
+
+    </main>
+
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+        $(document).ready(function() {
+             app.initialize();
+         });
+     </script>
+    <!-- <script type="text/javascript">
+
+    </script> -->
+</body>
+
+</html>

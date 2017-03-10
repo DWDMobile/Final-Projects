@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Cantarell:700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>YAMAY</title>
+</head>
+<body class="backbody">
+    <div class="app">
+
+      <header>
+        <div class=headerdiv>
+          <a href="recipelist.html">
+          <img src="img/back.png" alt="back" class="menu" id="back">
+        </a>
+          <span class="headertitle" id="recipenorightbtn">RECIPE</span>
+        </div>
+      </header>
+      <main>
+        <div id="recipeimagediv">
+          <img src="img/emptycircle1.png" alt="empty" id="emptyc">
+          <div class="nameandlikediv">
+            <img src="img/star.png" alt="star" class="like">
+            <img src="img/starEmpty.png" alt="star" class="unlike">
+            <span class="recipemainname" id="eggfriedrice">EGG FRIED RICE</span>
+          </div>
+        </div>
+        <div class="linediv">
+          <img src="img/line.png" alt="line" class="line" id="recipeline1">
+        </div>
+        <div>
+          <ul class="recipeinglist">
+            <li class="recipeing">1-2 eggs</li>
+            <li class="recipeing">1/4 onion</li>
+            <li class="recipeing alterShow" id="alterOyster">oyster sauce</li>
+            <li class="recipeing alterNone" id="alterSalt">salt</li>
+            <li class="recipeing">1/2-1 garlic</li>
+            <li class="recipeing">pepper</li>
+            <li class="recipeing">rice</li>
+          </ul>
+        </div>
+        <div class="linediv">
+          <img src="img/line.png" alt="line" class="line" id="recipeline2">
+        </div>
+        <div>
+          <ul class="recipeinstructionlist">
+            <li class="recipeinstruction">Heat oil in a medium skillet or wok over medium heat.</li>
+            <li class="recipeinstruction">Saute onions and garlics for 2 to 3 minutes.</li>
+            <li class="recipeinstruction"> Pour in egg and fry for 2 minutes, scrambling egg while it cooks.</li>
+            <li class="recipeinstruction">Stir in the cooked rice, mix well and sprinkle with oyster sauce and pepper.</li>
+            <li class="recipeinstruction" id="donebtn">DONE</li>
+          </ul>
+        </div>
+      </main>
+      <footer>
+        <div class="footer">
+          <img src="img/share.png" alt="share" class="share">
+          <img src="img/comments.png" alt="comments" class="comments">
+        </div>
+      </footer>
+
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script src="http://code.skygear.io/js/polyfill/latest/polyfill.min.js"></script>
+    <script src="http://code.skygear.io/js/skygear/latest/skygear.min.js"></script>
+    <script type="text/javascript" src="js/recipe.js"></script>
+    <script>
+        $(document).ready(function() {
+             app.initialize();
+         });
+     </script>
+</body>
+
+</html>
