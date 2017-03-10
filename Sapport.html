@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sapport</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+		<style>
+			html{
+				background-color:#eee;
+				font-family: 'Quicksand', sans-serif;
+			}
+			body{
+				width:100%;
+				max-width:650px;
+				background-color:#fff;
+				margin:0 auto;
+				box-shadow:0 0 10px #000;
+				min-height: 95vh;
+			}
+
+			nav{
+				height:30px;
+				background-color:#00A29B;
+				text-align:center;
+				font-size:18px;
+				padding-top:10px;
+			}
+
+			nav a{
+				margin:10px;
+				color:#fff;
+				text-decoration:none;
+				
+			}
+
+			section{
+				display:none;
+			}
+
+			section:target{
+				display:block;
+
+			}
+			form{
+				display:block;
+				margin:60px auto;
+				width:220px;
+				padding-bottom:50px;
+
+			}
+
+			label{
+				display:block;
+				margin-top: 25px;
+
+			}
+
+			input{
+				width:220px;
+			}
+            input[type='button'], input[type='submit']{
+            	width:80px;
+            	margin-top: 35px;
+            	float:right;
+            	background-color: #ddd;
+
+            }
+
+            img.support {
+            	width:1000px;
+            	height:800px;
+
+            }
+
+            @media only screen and (max-width: 700px) {
+   img.support{
+        width: 150%;
+        height:160%;
+
+
+        
+    }
+
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a href="#home">home</a>
+			<a href="#signup">signup</a>
+			<a href="#login">login</a>
+		</nav>
+
+		<section id="home">
+			<img src="sapport.svg" class= "support"/>
+  	    </section>
+
+  	    <
+
+		<section id="signup">
+			<form>
+				<label for="firstname">First Name*</label>
+				<input type="text" name="firstname" id="firstname">
+				<label for="lastname">Last Name*</label>
+				<input type="text" name="lastname" id="lastname">
+				<label for="email">Email*</label>
+				<input type="text" name="email" id="email">
+				<label for="lastname">Password*</label>
+				<input type="text" name="password" id="password">
+				
+				<a href="#choose">Submit</a>
+			</form>
+		</section>
+		<section id="login">
+      <form>
+				<label for="email">Email*</label>
+				<input type="text" name="email" id="email">
+				<label for="lastname">Password*</label>
+				<input type="text" name="password" id="password">
+				<a href="#choose">Login</a>
+
+			</form>
+        
+		</section>
+		<section id="choose">
+         <img src="choose.svg"/>
+		</section>
+
+	</body>	
+</html>
