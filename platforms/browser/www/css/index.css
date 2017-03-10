@@ -1,0 +1,524 @@
+/**************************************
+
+************Custom Stylesheet**********
+
+***************************************/
+
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-size: 12px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+/*******************************
+    * Game Canvas
+    *******************************/
+
+canvas {
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+
+@media screen {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background: #212121;
+        font-family: monospace;
+        color: white;
+    }
+    .screen-reader-text {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+    }
+    /*******************************
+    * Custom Grid 
+    *******************************/
+    .wrapper {
+        width: 1440px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .flex-wrapper {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flexbox;
+        display: -moz-flex;
+        display: -o-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -o-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .row {
+        margin: 0 -20px;
+    }
+    .flex-row {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flexbox;
+        display: -moz-flex;
+        display: -o-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -o-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .col {
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+    .one-half-col {
+        -moz-flex-basis: 50%;
+        -ms-flex-basis: 50%;
+        -o-flex-basis: 50%;
+        -webkit-flex-basis: 50%;
+        flex-basis: 50%;
+    }
+    .one-quarter-col {
+        -moz-flex-basis: 25%;
+        -ms-flex-basis: 25%;
+        -o-flex-basis: 25%;
+        -webkit-flex-basis: 25%;
+        flex-basis: 25%;
+    }
+    .one-sixth-col {
+        -moz-flex-basis: calc(100% / 6);
+        -ms-flex-basis: calc(100% / 6);
+        -o-flex-basis: calc(100% / 6);
+        -webkit-flex-basis: calc(100% / 6);
+        flex-basis: calc(100% / 6);
+    }
+    #header .one-sixth-col {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    #about-title,
+    #section-title {
+        font-size: 1em;
+        margin: 0;
+        font-weight: normal;
+    }
+    #site-title {
+        font-size: 1.2em;
+        margin: 0;
+        font-weight: bold;
+    }
+    /*******************************
+    * Text Layout
+    *******************************/
+    h1,
+    h3 {
+        font-weight: normal;
+        margin: 0 0 1em 0;
+    }
+    h2 {
+        font-weight: normal;
+        margin: -150px 0 1em 200px;
+    }
+    h1 {
+        display: block;
+        font-size: 2em;
+        -webkit-margin-before: 0.67em;
+        -webkit-margin-after: 0.67em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;
+    }
+    p {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font-weight: 400;
+        vertical-align: baseline;
+        background: 0 0
+    }
+}
+
+
+/*******************************
+    * Header
+    *******************************/
+
+#header {
+    background: #2e2e2e;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    /*padding: 1em 0;*/
+    z-index: 9999;
+}
+
+#header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/*******************************
+    * Main Page
+    *******************************/
+
+#main-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999999;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    overflow: auto;
+    padding: 2em 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s 0.35s;
+}
+
+#main-menu .wrapper {
+    transform: translate3D(0, -1em, 0);
+    transition: transform 0.5s;
+}
+
+body.main-menu-active {
+    overflow: hidden;
+}
+
+body.main-menu-active #main-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s;
+}
+
+body.main-menu-active #main-menu .wrapper {
+    transform: translate3D(0, 0, 0);
+}
+
+#main-menu .row {
+    min-height: calc(100vh - 4em);
+}
+
+#main-menu-content {
+    margin: auto;
+    list-style: none;
+    text-align: center;
+}
+
+#main-menu-content a {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+    color: inherit;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin: 0.5em 0;
+    text-align: center;
+}
+
+
+/*******************************
+    * Footer
+    *******************************/
+
+ul,
+ol {
+    margin: 0 0 1em 0;
+}
+
+
+/*******************************
+    * Home Page
+    *******************************/
+
+#home-intro {
+    min-height: calc(100vh - 4.59em);
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    left: 0;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#home-chose-section {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    z-index: 20;
+}
+
+#home-chose-section a {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+}
+
+#home-chose-section a span {
+    display: block;
+    font-size: 1em;
+    padding: 1em calc(1em + 20px);
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+
+/*******************************
+    * Home Page Buttons
+    *******************************/
+
+.home-chose-play-section {
+    background: #FFC400;
+    color: white;
+}
+
+.home-chose-play-section span {
+    line-height: 2.6em;
+}
+
+.home-chose-play-section::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    right: -3em;
+    bottom: 0;
+    left: -3em;
+    background: #FF3D00;
+    display: block;
+    transition: all 0.25s 0.25s;
+}
+
+.home-chose-play-section::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 100%;
+    right: -3em;
+    bottom: 0;
+    left: -3em;
+    background: #2979FF;
+    display: block;
+    transition: all 0.25s;
+}
+
+.home-chose-play-section:hover::before {
+    top: 0;
+    transition: all 0.25s;
+}
+
+.home-chose-play-section:hover::after {
+    top: 0;
+    transition: all 0.25s 0.25s;
+}
+
+.home-chose-exit-section {
+    background: white;
+    color: black;
+    transition: color 0.5s;
+}
+
+.home-chose-exit-section::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    right: -3em;
+    bottom: 0;
+    left: -3em;
+    background: #c8c8c8;
+    display: block;
+    transition: all 0.25s 0.25s;
+}
+
+.home-chose-exit-section::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 100%;
+    right: -3em;
+    bottom: 0;
+    left: -3em;
+    background: black;
+    display: block;
+    transition: all 0.25s;
+}
+
+.home-chose-exit-section:hover {
+    color: white;
+}
+
+.home-chose-exit-section:hover::before {
+    top: 0;
+    transition: all 0.25s;
+}
+
+.home-chose-exit-section:hover::after {
+    top: 0;
+    transition: all 0.25s 0.25s;
+}
+
+
+/*******************************
+    * Animation
+    *******************************/
+
+.page-title span,
+.opacity-animation {
+    animation-duration: 1.5s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+}
+@media screen and (max-width: 640px) {
+    /*******************************
+    * Layout
+    *******************************/
+    
+    .grid-item-content {
+        width: 100%;
+    }
+    
+    .wrapper {
+        width: auto;
+        margin: 0 10px;
+    }
+    /*** HEADER ***/
+    
+    #home-mobile-edition-title {
+        font-size: 1em;
+    }
+    
+    #home-chose-section a span {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+}
+@media screen and (max-width: 1840px) {
+    /*******************************
+    * Layout
+    *******************************/
+    
+    .grid-item-content {
+        width: 100%;
+    }
+    
+    .wrapper {
+        width: auto;
+        margin: 0 10px;
+    }
+    /*** HEADER ***/
+    
+    #home-mobile-edition-title {
+        font-size: 1em;
+    }
+    
+    #home-chose-section a span {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+}
+
+/*******************************
+* About Page
+*******************************/
+#body-class-watcher.about-section {
+    color: black;
+    background: black;
+}
+.about-page-title {
+    display: none;
+    font-size: 3em;
+    margin: 7em auto;
+    font-weight: normal;
+    text-align: center;
+    width: 50%;
+    overflow: hidden;
+}
+
+/*******************************
+* Carousel Base Class
+*******************************/
+.carousel {
+    display: none;
+    height: 500px;
+    margin-bottom: 60px;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+    height: 500px;
+    background-color: #777;
+}
+.carousel-inner>.item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}
