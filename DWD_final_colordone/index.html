@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Accessible metro map</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="style.css"> <!--CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> <!--Bootstrap stylesheet-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!--JQuery library-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> <!--Bootstrap Javascript-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--WheelChairIcons-->
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!--WC Icons-->
+
+
+</head>
+
+<body>
+<!--content -->
+  
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#home">Start</a></li>
+    <li><a href="#menu1">Lines</a></li>
+    <li><a href="#menu2">Stations</a></li>
+    
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>Accessible Metro Station Near Me </h3>
+      <p>See stations nearby on the map, or search your location.</p>
+      <div id="map"></div>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+  
+      <div class="container">
+                               
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Line</th>
+        <th>facilities</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+           <div class="circleRed">
+        <p><b>1</b></p>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+        <div class="circleRed">
+        <p><b>2</b></p>
+          </div>
+          </td>
+        <td><i style="font-size:24px" class="fa">&#xf193;</i></td> 
+      </tr>
+      <tr>
+        <td>
+        <div class="circleRed">
+        <b>3</b>
+        </td>
+        <td><i class="material-icons">&#xe63d;</i></td>
+      </tr>
+      <tr>
+        <td><div class="circleGreen">
+        <b>4</b>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><div class="circleGreen">
+        <b>5</b></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><div class="circleGreen">
+        <b>6</b></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><div class="circlePurple">
+        <b>7</b></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><div class="circleBlue">
+        <b>A</b></td>
+        <td></td>
+      </tr>
+       <tr>
+        <td><div class="circleOrange">
+        <b>B</b></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+   
+    </div>
+  </div>
+</div>
+<script>
+// function initMap() {
+//   var map = new google.maps.Map(document.getElementById('map'), {
+//     center: {lat: -34.397, lng: 150.644},
+//     zoom: 6
+//   });
+//   var infoWindow = new google.maps.InfoWindow({map: map});
+
+//   // Try HTML5 geolocation.
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(function(position) {
+//       var pos = {
+//         lat: position.coords.latitude,
+//         lng: position.coords.longitude
+//       };
+
+//       infoWindow.setPosition(pos);
+//       infoWindow.setContent('Location found.');
+//       map.setCenter(pos);
+//     }, function() {
+//       handleLocationError(true, infoWindow, map.getCenter());
+//     });
+//   } else {
+//     // Browser doesn't support Geolocation
+//     handleLocationError(false, infoWindow, map.getCenter());
+//   }
+// }
+
+// function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+//   infoWindow.setPosition(pos);
+//   infoWindow.setContent(browserHasGeolocation ?
+//                         'Error: The Geolocation service failed.' :
+//                         'Error: Your browser doesn\'t support geolocation.');
+// }
+</script>
+<script src="script.js"></script> <!--Javascript-->
+ <script src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyCvQjfVv7gqCe9LreIokvaYSlaOuyxjaDU&callback=initMap"
+        async defer>
+    </script>
+
+
+</body>
+</html>

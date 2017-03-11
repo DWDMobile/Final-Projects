@@ -1,0 +1,65 @@
+
+      #map {
+        height: 1000px;
+
+      }
+
+      .circleRed {
+    text-align:center;
+    color:white;
+	width: 20px;
+	height: 20px;
+	background: red;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	position:relative;
+}
+
+.circleGreen {
+    text-align:center;
+    color:white;
+	width: 20px;
+	height: 20px;
+	background: green;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	position:relative;
+}
+
+.circlePurple {
+    text-align:center;
+    color:white;
+	width: 20px;
+	height: 20px;
+	background: purple;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	position:relative;
+}
+
+.circleBlue {
+    text-align:center;
+    color:white;
+	width: 20px;
+	height: 20px;
+	background: blue;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	position:relative;
+}
+
+.circleOrange {
+    text-align:center;
+    color:white;
+	width: 20px;
+	height: 20px;
+	background: orange;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	position:relative;
+}
