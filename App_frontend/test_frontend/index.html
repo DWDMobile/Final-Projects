@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <!-- <form action="http://savestyle.mybluemix.net/scrapecolor" method="post">
+      <input type="text" id="textfield" name="url"></input>
+      <button type="submit" id="button"></button>
+    </form> -->
+    <input type="text" id="textfield"></input>
+    <button id="button"></button>
+  </body>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      console.log("ready");
+      $("#button").click(function(){
+        console.log("clicked");
+        var url = $("#textfield").val();
+        console.log(url);
+        if (url) {
+          var query = {
+              "url": url
+          }
+          console.log(query);
+          $.ajax({
+              type: 'POST',
+              dataType: "json",
+              url: 'https://savestyle.herokuapp.com/scrapecolor',
+              // url: 'http://savestyle.mybluemix.net/scrapecolor',
+              data: query,
+              success: function(data) {
+                  gotData(data);
+              }
+          });
+        }
+      });
+    })
+    function gotData(data){
+      console.log(data);
+    }
+  </script>
+</html>

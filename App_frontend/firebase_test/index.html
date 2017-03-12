@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Firebase test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+    <script>
+      $(document).ready(function(){
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDFvI4Wa2Re2F2OyWaqoGvw8lK1SjNXuBA",
+            authDomain: "savestyle-81bf4.firebaseapp.com",
+            databaseURL: "https://savestyle-81bf4.firebaseio.com",
+            storageBucket: "savestyle-81bf4.appspot.com",
+            messagingSenderId: "457015776359"
+        };
+        firebase.initializeApp(config);
+        var database = firebase.database();
+
+        //ADDING DATA TO FIREBASE
+        var ref = database.ref('styles/username2');
+        var data = {
+          source : "source_name",
+          colors : ['color1', 'color2'],
+          fonts : ['font1', 'font2']
+        }
+        // ref.push(data);
+
+        //RETREIVING DATA FROM FIREBASE
+        var refe = database.ref('styles/username');
+        refe.on('value', gotData, errData);
+      });
+
+      function gotData(data){
+        console.log(data.val());
+        var styles = data.val();
+        var keys = Object.keys(styles);
+        for(i = 0 ; i < keys.length ; i++){
+          var k = keys[i];
+          var colors = styles[k].colors;
+          var fonts = styles[k].fonts;
+          var source = styles[k].source;
+          console.log(colors, fonts, source);
+        }
+      }
+      function errData(err){
+        console.log(err);
+      }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
