@@ -1,0 +1,51 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+REMOTE_URL_REGEX	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    private static Pattern REMOTE_URL_REGEX = Pattern.compile("^http(s)?:\/\/.*");$/;"	f	class:RemoteInjectionPlugin	file:
+RemoteInjectionPlugin	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^public class RemoteInjectionPlugin extends CordovaPlugin {$/;"	c
+RequestLifecycle	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        RequestLifecycle(Activity activity, CordovaWebViewEngine engine, int promptInterval) {$/;"	m	class:RemoteInjectionPlugin.RequestLifecycle
+RequestLifecycle	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    private static class RequestLifecycle {$/;"	c	class:RemoteInjectionPlugin
+TAG	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    private static String TAG = "RemoteInjectionPlugin";$/;"	f	class:RemoteInjectionPlugin	file:
+UserPromptTask	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        UserPromptTask(RequestLifecycle lifecycle, Activity activity, CordovaWebViewEngine engine, String url) {$/;"	m	class:RemoteInjectionPlugin.UserPromptTask
+UserPromptTask	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    static class UserPromptTask extends TimerTask {$/;"	c	class:RemoteInjectionPlugin
+activity	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        private final Activity activity;$/;"	f	class:RemoteInjectionPlugin.RequestLifecycle	file:
+activity	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        private final Activity activity;$/;"	f	class:RemoteInjectionPlugin.UserPromptTask	file:
+alertDialog	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        AlertDialog alertDialog;$/;"	f	class:RemoteInjectionPlugin.UserPromptTask
+cancel	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        public boolean cancel() {$/;"	m	class:RemoteInjectionPlugin.UserPromptTask
+cleanup	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        private void cleanup() {$/;"	m	class:RemoteInjectionPlugin.UserPromptTask	file:
+com.truckmovers.cordova	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^package com.truckmovers.cordova;$/;"	p
+engine	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        private final CordovaWebViewEngine engine;$/;"	f	class:RemoteInjectionPlugin.RequestLifecycle	file:
+engine	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        private final CordovaWebViewEngine engine;$/;"	f	class:RemoteInjectionPlugin.UserPromptTask	file:
+injectCordova	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    private void injectCordova() {$/;"	m	class:RemoteInjectionPlugin	file:
+injectFirstFiles	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/ios/CDVRemoteInjection.h	/^@property (readonly) NSArray *injectFirstFiles;$/;"	v
+isLoading	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        boolean isLoading() {$/;"	m	class:RemoteInjectionPlugin.RequestLifecycle
+isRemote	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    private boolean isRemote(String url) {$/;"	m	class:RemoteInjectionPlugin	file:
+jsPathsToInject	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    private List<String> jsPathsToInject(AssetManager assets, String path){$/;"	m	class:RemoteInjectionPlugin	file:
+lifecycle	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        private final RequestLifecycle lifecycle;$/;"	f	class:RemoteInjectionPlugin.UserPromptTask	file:
+lifecycle	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    private RequestLifecycle lifecycle;$/;"	f	class:RemoteInjectionPlugin	file:
+onMessage	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    public Object onMessage(String id, Object data) {$/;"	m	class:RemoteInjectionPlugin
+onMessageTypeFailure	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    private void onMessageTypeFailure(String messageId, Object data) {$/;"	m	class:RemoteInjectionPlugin	file:
+onReset	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    public void onReset() {$/;"	m	class:RemoteInjectionPlugin
+plugin	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/ios/CDVRemoteInjectionUIWebViewDelegate.h	/^@property (readwrite, weak) CDVRemoteInjectionPlugin *plugin;$/;"	v
+plugin	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/ios/CDVRemoteInjectionWKWebViewDelegate.h	/^@property (readwrite, weak) CDVRemoteInjectionPlugin *plugin;$/;"	v
+pluginInitialize	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    protected void pluginInitialize() {$/;"	m	class:RemoteInjectionPlugin
+preInjectionFileNames	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    private final ArrayList<String> preInjectionFileNames = new ArrayList<String>();$/;"	f	class:RemoteInjectionPlugin	file:
+promptInterval	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        private final int promptInterval;$/;"	f	class:RemoteInjectionPlugin.RequestLifecycle	file:
+promptInterval	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    private int promptInterval;  \/\/ Delay before prompting user to retry in seconds$/;"	f	class:RemoteInjectionPlugin	file:
+promptInterval	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/ios/CDVRemoteInjection.h	/^@property (readonly) NSInteger promptInterval;$/;"	v
+promptInterval	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/ios/CDVRemoteInjectionWebViewBaseDelegate.h	/^@property (readonly) NSInteger promptInterval;$/;"	v
+readFile	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^    private String readFile(AssetManager assets, String filePath) {$/;"	m	class:RemoteInjectionPlugin	file:
+requestStarted	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        void requestStarted(final String url) {$/;"	m	class:RemoteInjectionPlugin.RequestLifecycle
+requestStopped	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        void requestStopped() {$/;"	m	class:RemoteInjectionPlugin.RequestLifecycle
+run	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        public void run() {$/;"	m	class:RemoteInjectionPlugin.UserPromptTask
+showConnectionErrorDialog	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/ios/CDVRemoteInjection.h	/^@property (readonly) BOOL showConnectionErrorDialog;$/;"	v
+startTask	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        private synchronized void startTask(final String url) {$/;"	m	class:RemoteInjectionPlugin.RequestLifecycle	file:
+stopTask	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        private synchronized void stopTask() {$/;"	m	class:RemoteInjectionPlugin.RequestLifecycle	file:
+task	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        private UserPromptTask task;$/;"	f	class:RemoteInjectionPlugin.RequestLifecycle	file:
+url	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/android/RemoteInjectionPlugin.java	/^        final String url;$/;"	f	class:RemoteInjectionPlugin.UserPromptTask
+webViewDelegate	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/ios/CDVRemoteInjectionUIWebViewDelegate.h	/^@property (readwrite, weak) CDVRemoteInjectionUIWebViewDelegate *webViewDelegate;$/;"	v
+webViewDelegate	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/ios/CDVRemoteInjectionWKWebViewDelegate.h	/^@property (readwrite, weak) CDVRemoteInjectionWKWebViewDelegate *webViewDelegate;$/;"	v
+wrappedDelegate	/Users/bradr/Development/cordova-testing/cordova-plugin-remote-injection/src/ios/CDVRemoteInjectionWebViewBaseDelegate.h	/^@property (readwrite, retain) id wrappedDelegate;$/;"	v
