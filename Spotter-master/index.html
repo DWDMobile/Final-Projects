@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <title>Spotter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" , user-scalable="no" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Amatic+SC|Open+Sans+Condensed:300" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <section class="page" id="page1">
+        <div class="content">
+            <div class="info">
+                <h1>Spotter</h1>
+                <h2>What you need, when you need</h2>
+
+                <div class="login">
+
+                    <input type="email" class="email" name="email" placeholder="email" />
+
+                    <input type="password" class="password" name="password" placeholder="password" />
+
+                    <div>
+                        <button class="sign-in-button">Log In</button>
+
+                        <button class="sign-up-button">Sign Up</button>
+                    </div>
+
+                    <div class="errors"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="page" id="page2">
+        <div class="content">
+            <div class="info">
+                <h1>Hello!</h1>
+                <div class="email"></div>
+
+                <h3>I need...</h3>
+
+                <button class="optionButton" data-need="tampon">Tampon</button>
+                <button class="optionButton" data-need="pad">Pad</button>
+                <button class="optionButton" data-need="advil">Advil</button>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="page" id="page3">
+        <div class="content">
+            <button class="changePage" data-next-page="#page2">Back</button>
+            <div class="info">
+                <p>Finding a(n) <span class="buttonSelection"></span> in your area</p>
+
+                <div id="map"></div>
+
+                <button class="personOptionButton" value="10 ft away">10 ft away</button>
+                <button class="personOptionButton" value="15 ft away">15 ft away</button>
+                <button class="personOptionButton" value="25 ft away">25 ft away</button>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="page" id="page4">
+        <div class="content">
+            <button class="changePage" data-next-page="#page3">Back</button>
+            <div class="info">
+                <p>There is a person with a <span class="buttonSelection"></span> <span class="personSelection"></span> from you</p>
+
+<!--                <div id="map"></div>-->
+
+                <textarea rows="5"wrap="hard" placeholder="Type message here..."></textarea>
+                
+                <button class="requestButton">Request</button>
+
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="page" id="page5">
+        <div class="content">
+            <button class="changePage" data-next-page="#page4">Back</button>
+            <div class="info">
+               <h2>Request sent!</h2>
+               <p>We will send you a notification when a location is shared with you.</p>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+<!--Skygear CDN-->
+<script src="https://code.skygear.io/js/polyfill/latest/polyfill.min.js"></script>
+<script src="https://code.skygear.io/js/skygear/latest/skygear.min.js"></script>
+
+<script src="script.js"></script>
+
+
+<script type="text/javascript">
+    app.initialize();
+</script>
+
+<script>
+    // Note: This example requires that you consent to location sharing when
+    // prompted by your browser. If you see the error "The Geolocation service
+    // failed.", it means you probably did not give permission for the browser to
+    // locate you.
+
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: -34.397,
+                lng: 150.644
+            },
+            zoom: 6
+        });
+        var infoWindow = new google.maps.InfoWindow({
+            map: map
+        });
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                infoWindow.setPosition(pos);
+                infoWindow.setContent('Location found.');
+                map.setCenter(pos);
+            }, function () {
+                handleLocationError(true, infoWindow, map.getCenter());
+            });
+        } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+        }
+    }
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: The Geolocation service failed.' :
+            'Error: Your browser doesn\'t support geolocation.');
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaQffhdyWoYdXK6wunz3zBchhaYEkU1Rg&callback=initMap">
+</script>
+
+
+
+</html>
